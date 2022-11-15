@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="meins">TEXT</div>
+
+    <script>
+
+        // zwingt einem die Variablen richtig zu verwenden
+        "use strict";
+
+      console.log("LOG");
+      console.error("ERROR");
+      console.warn("WARN");
+      console.info("INFO");
+      //alert("ALERT")
+
+      // Text verändern .... JS
+      document.getElementById("meins").innerHTML = "Neuer Text";
+      document.write("<br> Zusätzlicher text");
+
+      //Variablen
+      let a = 1;
+      var b = 2;
+      const c = 11;
+
+      {
+        let a = 5;
+        b = 10;
+        console.log(a + b);
+        console.log(b);
+      }
+      console.log(a);
+      console.log(b);
+
+      var h = "X";
+      console.log(b + h);
+
+      var u = 0;
+
+      u += 1;
+      u = u + 1;
+
+      console.log(u / 0);
+
+      // Object
+      var i = {
+        name: "Adolf",
+        nachname: "Hitler",
+        alter: 88,
+      };
+
+      console.log(i.name);
+      console.log(i.nachname);
+      console.log(i.alter);
+
+      // Array
+      var j = [1, 2, 3, 4, 5];
+      console.log(j[2]);
+      j.push(11);
+      console.log(j[j.length - 1]);
+
+      //Funktionen
+      function f1(text) {
+        console.log(text);
+      }
+
+      f1("HAHAH LOL");
+
+      // String
+      var s = "Heiri's Sauerkraut";
+      // slice(start, end)
+      console.log(s.slice(2, 7));
+      // slice(start, length)
+      console.log(s.substr(2, 7));
+      // slice(start, end)
+      console.log(s.substring(2, 7));
+
+      console.log(s.toUpperCase());
+      console.log(s.toLowerCase());
+
+      console.log(s.replace("Heiri", "Hans"));
+
+      console.log(s.indexOf("Sauerkraut"));
+
+      let name = "Baba";
+      let alter = 88;
+      // Spezielle String zeichen mit shift + rechts neben fragezeichen
+      console.log(`Hallo ${name} du bist ${alter} jahre alt`);
+
+      let tags = ["Banane", "Apfel", "Mango", "Orange", "Pfirsich"];
+      for (let tag of tags) {
+        console.log(tag);
+      }
+
+      console.log(tags[0]);
+      tags.reverse();
+      console.log(tags[0]);
+      tags.sort();
+      console.log(tags[0]);
+
+      // Funktioniert nicht immer
+      tags.forEach((element) => {
+        console.warn(element);
+      });
+
+      let cars = {
+        car: "Honda",
+        model: "Civic",
+        year: "1998",
+      };
+
+      Object.entries(cars).forEach((element) => {
+        const [key, value] = element;
+        console.log(key, value);
+      });
+
+      //Callback?
+      function myDisplayer(some) {
+        console.log(some);
+      }
+
+      function myCalculator(num1, num2, myCallback) {
+        let sum = num1 + num2;
+        myCallback(sum);
+      }
+
+      myCalculator(5, 5, myDisplayer);
+    </script>
+  </body>
+</html>
