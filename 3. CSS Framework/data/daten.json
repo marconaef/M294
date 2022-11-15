@@ -1,0 +1,31 @@
+{
+    "cars" : [
+        {
+            "id": 1,
+            "name": "Audi",
+            "kraftstoff": "Diesel",
+            "farbe": "#000000",
+            "bauart": "Limousine",
+            "tank": 0,
+            "datum": "2019-08-07"
+        }, 
+        {
+            "id": 2,
+            "name": "Passat",
+            "kraftstoff": "Diesel",
+            "farbe": "#00ffff",
+            "bauart": "Cabrio",
+            "tank": 2,
+            "datum": "2012-02-04"
+        }, 
+        {
+            "id": 3,
+            "name": "Koenigsegg",
+            "kraftstoff": "Super",
+            "farbe": "#ffff00",
+            "bauart": "Sportwagen",
+            "tank": 5,
+            "datum": "2022-08-07"
+        }
+    ]
+}

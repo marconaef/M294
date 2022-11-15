@@ -21,16 +21,142 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
-
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
+    <!-- Compiled and minified CSS -->
+    <!-- Immer vor eigenem CSS weil man sachen von dort überschreiben will.-->
+    <link rel="stylesheet" href="./css/materialize.css" />
 
     <link rel="stylesheet" href="./css/index.css" />
 
-    <script src="./js/jQuery.js" ></script>
+    <script src="./js/jQuery.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <!-- Braucht JQuery und wenn man es selber verwenden will muss es vor dem eigenen sein.-->
+    <script src="./js/materialize.js"></script>
     <script src="./js/index.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    Test
+    <nav class="purple accent-4">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Autoverkauf</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <button class="btn">ADD</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <table class="grey striped" id="myTable">
+      <thead class="green white-text">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Kraftstoff</th>
+          <th>Farbe</th>
+          <th>Bauart</th>
+          <th>Betankungen</th>
+          <th>Datum</th>
+          <th>Aktion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-id="1">
+          <td>1</td>
+          <td>Passat</td>
+          <td>Diesel</td>
+          <td>
+            <span class="color " style="background-color: #00ffff">-----</span>
+            #00ffff
+          </td>
+          <td>Limousine</td>
+          <td>0</td>
+          <td>2019-08-07</td>
+          <td>
+            <span class="tank material-icons-outlined blue-text"
+              >directions_car</span
+            >
+            <span class="edit material-icons-outlined green-text"> edit </span>
+            <span class="delete material-icons-outlined red-text">
+              delete
+            </span>
+          </td>
+        </tr>
+        <tr data-id="2">
+          <td>2</td>
+          <td>Passat</td>
+          <td>Diesel</td>
+          <td>
+            <span class="color" style="background-color: #000000">-----</span>
+            #000000
+          </td>
+          <td>Limousine</td>
+          <td>0</td>
+          <td>2019-08-07</td>
+          <td>
+            <span class="tank material-icons-outlined blue-text"
+              >directions_car</span
+            >
+            <span class="edit material-icons-outlined green-text"> edit </span>
+            <span class="delete material-icons-outlined red-text">
+              delete
+            </span>
+          </td>
+        </tr>
+        <tr data-id="3">
+          <td>3</td>
+          <td>Passat</td>
+          <td>Diesel</td>
+          <td>
+            <span class="color" style="background-color: #0000ff">-----</span>
+            #0000ff
+          </td>
+          <td>Limousine</td>
+          <td>0</td>
+          <td>2019-08-07</td>
+          <td>
+            <span class="tank material-icons-outlined blue-text"
+              >directions_car</span
+            >
+            <span class="edit material-icons-outlined green-text"> edit </span>
+            <span class="delete material-icons-outlined red-text">
+              delete
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- purple accent-3 Hintergrundfarbe -->
+    <!-- light-green accent-3 schriftfarbe muss aber noch bei der fabre und bei dem accent ergänzt werden -->
+    <p class="purple accent-3 light-green-text text-accent-3">Text</p>
+
+    <hr />
+
+    <!-- IMmer 12 Teile -->
+    <!-- Offset = Abstand Links und rechts -->
+    <!-- Pull und Push abstand von links und rechts -->
+    <div class="row">
+      <div
+        class="col s6 offset-s3 m4 offset-m4 l2 offset-l5 light-green center z-depth-5"
+      >
+        Fake 1
+      </div>
+      <div class="col s12"><hr /></div>
+      <div class="col s12 m6 l2 xl1 blue">1</div>
+      <div class="col s6 m4 l2 xl1 red">2</div>
+      <div class="col s6 m4 l2 xl1 yellow">3</div>
+      <div class="col s6 m4 l2 xl1 green">4</div>
+      <div class="col s6 m4 l2 xl1 grey">5</div>
+      <div class="col s6 m4 l2 xl1 pink">6</div>
+      <div class="col s6 m4 l2 xl1 indigo">7</div>
+      <div class="col s6 m4 l2 xl1 orange">8</div>
+    </div>
   </body>
 </html>
