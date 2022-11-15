@@ -1,6 +1,7 @@
 .footer{
     background-color: aqua;
     border-radius: 10px;
+    min-height: 20px;
     display: flex;
 }
 
@@ -13,6 +14,7 @@
 .normal{
     background-color: grey;
     min-width: 250px;
+    min-height: 20px;
     margin: 10px;
     border-radius: 10px;
 }
