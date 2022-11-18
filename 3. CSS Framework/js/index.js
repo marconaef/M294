@@ -19,7 +19,7 @@ var template = $("#template").html();
 //Template compillieren
 var handlebars_template = Handlebars.compile(template);
 
-$.getJSON("data/daten.json",
+$.getJSON("api.php",
     function (response) {
         //Gibt alle Cars Objekte im Log aus
         console.log(response);
@@ -46,8 +46,8 @@ $.getJSON("data/daten.json",
     }
 );
 
-    $.getJSON("api.php", function(response) {
+/*     $.getJSON("api.php", function(response) {
         console.log(response);
-    })
+    }) */
 
 });
