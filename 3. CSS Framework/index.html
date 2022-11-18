@@ -33,6 +33,13 @@
     <!-- Compiled and minified JavaScript -->
     <!-- Braucht JQuery und wenn man es selber verwenden will muss es vor dem eigenen sein.-->
     <script src="./js/materialize.js"></script>
+
+    <!-- Handlebars einbinden-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <script src="./js/index.js"></script>
 
     <link
@@ -40,6 +47,11 @@
       rel="stylesheet"
     />
   </head>
+
+  <!-- Fehlerhandling -->
+  <!-- 1. Webseite neu laden -->
+  <!-- 1. Rechtsklick auf Website neu laden, cache leeren und neu starten -->
+  <!-- Untersuchen, Netzwerk, File anwählen, in neuem Tab öffnen und File explizit neu laden -->
 
   <body>
     <nav class="purple accent-4">
@@ -52,6 +64,45 @@
         </ul>
       </div>
     </nav>
+
+    <!-- Handlebar Template einbinden -->
+    <!-- immer mit {{}} anfang immer mit # starten und mit / aufhören -->
+    <script id="template" type="text/x-handlebars-template">
+      {{#each cars}}
+        <tr data-id="{{id}}">
+          <td>{{id}}</td>
+          <td>{{name}}</td>
+          <td>{{kraftstoff}}</td>
+          <td>
+            <span
+              class="color"
+              style="background-color: {{farbe}}"
+            ></span>
+            {{farbe}}
+          </td>
+          <td>{{bauart}}</td>
+          <td>{{tank}}</td>
+          <td>{{datum}}</td>
+          <td>
+            <span
+              class="tank material-icons-outlined blue-text"
+            >directions_car</span>
+            <span class="edit material-icons-outlined green-text"> edit </span>
+            <span class="delete material-icons-outlined red-text">
+              delete
+            </span>
+            {{Aktion}}
+          </td>
+
+        </tr>
+      {{/each}}
+    </script>
+    <!--   Entspricht dem oben 
+      {{#cars2}}
+        {{#.}}
+          {{name}} <br>
+        {{/.}}
+      {{/cars2}} -->
 
     <table class="grey striped" id="myTable">
       <thead class="green white-text">
@@ -67,69 +118,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr data-id="1">
-          <td>1</td>
-          <td>Passat</td>
-          <td>Diesel</td>
-          <td>
-            <span class="color " style="background-color: #00ffff">-----</span>
-            #00ffff
-          </td>
-          <td>Limousine</td>
-          <td>0</td>
-          <td>2019-08-07</td>
-          <td>
-            <span class="tank material-icons-outlined blue-text"
-              >directions_car</span
-            >
-            <span class="edit material-icons-outlined green-text"> edit </span>
-            <span class="delete material-icons-outlined red-text">
-              delete
-            </span>
-          </td>
-        </tr>
-        <tr data-id="2">
-          <td>2</td>
-          <td>Passat</td>
-          <td>Diesel</td>
-          <td>
-            <span class="color" style="background-color: #000000">-----</span>
-            #000000
-          </td>
-          <td>Limousine</td>
-          <td>0</td>
-          <td>2019-08-07</td>
-          <td>
-            <span class="tank material-icons-outlined blue-text"
-              >directions_car</span
-            >
-            <span class="edit material-icons-outlined green-text"> edit </span>
-            <span class="delete material-icons-outlined red-text">
-              delete
-            </span>
-          </td>
-        </tr>
-        <tr data-id="3">
-          <td>3</td>
-          <td>Passat</td>
-          <td>Diesel</td>
-          <td>
-            <span class="color" style="background-color: #0000ff">-----</span>
-            #0000ff
-          </td>
-          <td>Limousine</td>
-          <td>0</td>
-          <td>2019-08-07</td>
-          <td>
-            <span class="tank material-icons-outlined blue-text"
-              >directions_car</span
-            >
-            <span class="edit material-icons-outlined green-text"> edit </span>
-            <span class="delete material-icons-outlined red-text">
-              delete
-            </span>
-          </td>
-        </tr>
+        <!-- Wir in Template befüllt -->
       </tbody>
     </table>
 
