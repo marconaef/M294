@@ -1,0 +1,241 @@
+<h1>Formular</h1>
+<!-- <input type="text" name="name" id="name">-->
+<div class="row">
+  <!-- Textfelder -->
+  <div class="input-field col s6">
+    <i class="material-icons prefix">account_circle</i>
+    <input id="name" type="text" />
+    <label for="name">Name</label>
+  </div>
+
+  <div class="input-field col s6">
+    <i class="material-icons prefix">account_circle</i>
+    <input id="vorname" type="text" />
+    <label for="vorname">First Name</label>
+  </div>
+
+  <!-- Text Area -->
+  <div class="input-field col s6">
+    <i class="material-icons prefix">mode_edit</i>
+    <textarea id="textarea" class="materialize-textarea"></textarea>
+    <label for="textarea">Text Area</label>
+  </div>
+
+  <!-- Datum -->
+  <div class="input-field col s6">
+    <i class="material-icons prefix">account_circle</i>
+    <input type="text" class="datepicker" />
+    <label for="datum">Date</label>
+  </div>
+
+  <!-- Zeit -->
+  <div class="input-field col s6">
+    <i class="material-icons prefix">account_circle</i>
+    <input type="text" class="timepicker" />
+    <label for="zeit">Time</label>
+  </div>
+
+  <!-- Farbe -->
+  <div class="input-field col s6">
+    <i class="material-icons prefix">account_circle</i>
+    <input id="color-picker" value="blue" />
+    <label for="farbe">Color</label>
+  </div>
+
+  <!-- Checkbox -->
+  <div class="input-field col s6">
+    <form action="#">
+      <p>
+        <label>
+          <input type="checkbox" />
+          <span>Red</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" checked="checked" />
+          <span>Yellow</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" class="filled-in" checked="checked" />
+          <span>Filled in</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input id="indeterminate-checkbox" type="checkbox" />
+          <span>Indeterminate Style</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" checked="checked" disabled="disabled" />
+          <span>Green</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" disabled="disabled" />
+          <span>Brown</span>
+        </label>
+      </p>
+    </form>
+  </div>
+
+  <!-- Dropdown -->
+  <div class="input-field col s6">
+    <!-- Dropdown Trigger -->
+    <a class="dropdown-trigger btn purple" href="#" data-target="dropdown1"
+      >Drop Me!</a
+    >
+
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content purple">
+      <li><a href="#!">one</a></li>
+      <li><a href="#!">two</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li><a href="#!">three</a></li>
+      <li>
+        <a href="#!"><i class="material-icons">view_module</i>four</a>
+      </li>
+      <li>
+        <a href="#!"><i class="material-icons">cloud</i>five</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Radio Buttons -->
+  <div class="input-field col s6">
+    <form action="#">
+      <p>
+        <label>
+          <input name="group1" type="radio" checked />
+          <span>Red</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input name="group1" type="radio" />
+          <span>Yellow</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input class="with-gap" name="group1" type="radio" />
+          <span>Green</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input name="group1" type="radio" disabled="disabled" />
+          <span>Brown</span>
+        </label>
+      </p>
+    </form>
+  </div>
+</div>
+
+<style>
+  /*Label - Text Farbe bei Focus*/
+  .input-field input:focus + label {
+    color: purple !important;
+  }
+
+  /*Input Field - Underline Color bei focus*/
+  .input-field input[type="text"]:focus {
+    border-bottom: 2px solid purple !important;
+    -webkit-box-shadow: 0 2px 0 0 purple !important;
+    -moz-box-shadow: 0 2px 0 0 purple !important;
+    box-shadow: 0 2px 0 0 purple !important;
+  }
+
+  /*Icon- Farbe bei Focus*/
+  .input-field .prefix.active {
+    color: purple !important;
+  }
+
+  /*Textarea - Farbe Linie bei Focus */
+  .input-field textarea[type="text"]:focus {
+    border-bottom: 2px solid purple !important;
+    -webkit-box-shadow: 0 2px 0 0 purple !important;
+    -moz-box-shadow: 0 2px 0 0 purple !important;
+    box-shadow: 0 2px 0 0 purple !important;
+  }
+
+  /*Datepicker - Farbe*/
+  .datepicker-date-display {
+    background-color: purple !important;
+  }
+  .datepicker-date-text {
+    color: yellowgreen !important;
+  }
+  .datepicker-table td.is-selected {
+    background-color: yellowgreen !important;
+  }
+  .datepicker-day-button {
+    color: purple !important;
+  }
+  .datepicker-cancel {
+    color: purple !important;
+  }
+  .datepicker-done {
+    color: purple !important;
+  }
+
+  /*Timepicker - Farben*/
+  .timepicker-digital-display {
+    background-color: purple !important;
+  }
+  .timepicker-close {
+    color: purple !important;
+  }
+  .timepicker-canvas-bg,
+  .timepicker-canvas line,
+  .timepicker-canvas-bearing {
+    fill: purple !important;
+    stroke: purple !important;
+  }
+
+  /* Checkbox */
+  p label span {
+    color: purple !important;
+  }
+  [type="checkbox"]:checked + span:not(.lever):before {
+    border-right: 2px solid purple !important;
+    border-bottom: 2px solid purple !important;
+  }
+
+  [type="checkbox"].filled-in:checked + span:not(.lever):before {
+    border-right: 2px solid #fff !important;
+    border-bottom: 2px solid #fff !important;
+  }
+
+  [type="checkbox"].filled-in:checked + span:not(.lever):after {
+    border: 2px solid purple !important;
+    color: purple !important;
+    background-color: purple !important;
+  }
+
+  /* Dropdown */
+  .dropdown-trigger,
+  .dropdown-content li a {
+    color: yellowgreen;
+  }
+
+  /* Radio Buttons */
+  /*Radiobuttons*/
+  [type="radio"]:checked + span:after,
+  [type="radio"].with-gap:checked + span:after {
+    background-color: purple !important;
+  }
+
+  [type="radio"]:checked + span:after,
+  [type="radio"].with-gap:checked + span:before,
+  [type="radio"].with-gap:checked + span:after {
+    border: 2px solid purple !important;
+  }
+</style>
+
+<button id="send" class="btn" type="submit">Senden</button>

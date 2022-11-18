@@ -36,16 +36,24 @@
 
     <!-- Handlebars einbinden-->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+      src="./js/handlebar.js"
       referrerpolicy="no-referrer"
     ></script>
 
     <script src="./js/index.js"></script>
 
+    <!-- Color Picker-->
+    <script src="js/spectrum.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/spectrum.min.css">
+
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet"
     />
+
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      
   </head>
 
   <!-- Fehlerhandling -->
@@ -59,7 +67,9 @@
         <a href="#" class="brand-logo">Autoverkauf</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <button class="btn">ADD</button>
+            <a href="#modal1" class="modal-trigger">
+              <button class="btn">ADD</button>
+            </a>
           </li>
         </ul>
       </div>
@@ -74,10 +84,7 @@
           <td>{{name}}</td>
           <td>{{kraftstoff}}</td>
           <td>
-            <span
-              class="color"
-              style="background-color: {{farbe}}"
-            ></span>
+            <span class="color" style="background-color: {{farbe}}"></span>
             {{farbe}}
           </td>
           <td>{{bauart}}</td>
@@ -146,6 +153,20 @@
       <div class="col s6 m4 l2 xl1 pink">6</div>
       <div class="col s6 m4 l2 xl1 indigo">7</div>
       <div class="col s6 m4 l2 xl1 orange">8</div>
+    </div>
+
+<!--  Modal Trigger 
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1"
+      >Modal</a
+    > -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 id="modal_title"></h4>
+        <p id="modal_content"></p>
+      </div>
+
     </div>
   </body>
 </html>
