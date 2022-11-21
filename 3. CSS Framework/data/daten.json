@@ -1,31 +1,59 @@
 {
-    "cars" : [
-        {
-            "id": 1,
-            "name": "Audi",
-            "kraftstoff": "Diesel",
-            "farbe": "#000000",
-            "bauart": "Limousine",
-            "tank": 0,
-            "datum": "2019-08-07"
-        }, 
-        {
-            "id": 2,
-            "name": "Passat",
-            "kraftstoff": "Diesel",
-            "farbe": "#00ffff",
-            "bauart": "Cabrio",
-            "tank": 2,
-            "datum": "2012-02-04"
-        }, 
-        {
-            "id": 3,
-            "name": "Koenigsegg",
-            "kraftstoff": "Super",
-            "farbe": "#ffff00",
-            "bauart": "Sportwagen",
-            "tank": 5,
-            "datum": "2022-08-07"
-        }
-    ]
+  "cars": [
+    {
+      "id": "1",
+      "name": "Opel",
+      "kraftstoff": "Diesel",
+      "farbe": "blue",
+      "bauart": "SUV",
+      "tank": "4",
+      "datum": "1.5.2000",
+      "bemerkung": "Beschreibung 01",
+      "status": "checked"
+    },
+    {
+      "id": "2",
+      "name": "VW",
+      "kraftstoff": "Benzin",
+      "farbe": "yellow",
+      "bauart": "PKW",
+      "tank": "7",
+      "datum": "7.6.2017",
+      "bemerkung": "Beschreibung 02",
+      "status": "checked"
+    },
+    {
+      "id": "3",
+      "name": "Audi",
+      "kraftstoff": "Diesel",
+      "farbe": "#000000",
+      "bauart": "Limousine",
+      "tank": "0",
+      "datum": "2019-08-07",
+      "bemerkung": "Beschreibung 03",
+      "status": "checked"
+    },
+    {
+      "id": "4",
+      "name": "Passat",
+      "kraftstoff": "Diesel",
+      "farbe": "#purple",
+      "bauart": "Cabrio",
+      "tank": "2",
+      "datum": "2012-02-04",
+      "bemerkung": "Beschreibung 04",
+      "status": "checked"
+    },
+    {
+      "id": "5",
+      "name": "Koenigsegg",
+      "kraftstoff": "Super",
+      "farbe": "orange",
+      "bauart": "Sportwagen",
+      "tank": "5",
+      "datum": "2022-08-07",
+      "bemerkung": "Beschreibung 05",
+      "status": ""
+    }
+  ]
 }

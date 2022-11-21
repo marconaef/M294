@@ -1,6 +1,7 @@
 id;name;kraftstoff;farbe;bauart;tank;datum;bemerkung;status
-1;Opel;Diesel;blue;SUV;4;1.5.2000;Beschreibung 01;checked
-2;VW;Benzin;yellow;PKW;7;7.6.2017;Beschreibung 02;checked
-3;Audi;Diesel;#000000;Limousine;0;2019-08-07;Beschreibung 03;checked
-4;Passat;Diesel;#00ffff;Cabrio;2;2012-02-04;Beschreibung 04;checked
-5;Koenigsegg;Super;#ffff00;Sportwagen;5;2022-08-07;Beschreibung 05;
+1;Mercedes;F1;silver;benzin;5;01.01.2022;Mercedes;checked
+2;Harald;diesel;pink;;;;;
+3;McLaren;F1;orange;benzin;5;03.01.2022;McLaren;checked
+4;Ferrari;F1;red;benzin;5;04.01.2022;Ferrari;checked
+5;Alpine;F1;blue;benzin;5;05.01.2022;Alpine;checked
+6;red Bull;F1;black;benzin;5;05.01.2022;Red Bull;checked
