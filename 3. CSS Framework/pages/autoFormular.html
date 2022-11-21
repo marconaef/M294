@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="./../css/autoFormular.css">
+
+<h1>Formular</h1>
+
+<hr>
+
+<div class="row">
+    <div class="col s6 green">
+        <input id="id" type="text" disabled="disabled" />
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="input-field col s6">
+        <input id="name" type="text" />
+        <label for="name">Name</label>
+    </div>
+    <div class="input-field col s6">
+        <select id="kraftstoff">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Benzin">Benzin</option>
+          <option value="Elektro">Elektro</option>
+        </select>
+        <label>Kraftstoff</label>
+      </div>
+    <div class="input-field col s6">
+        <input id="color-picker" value="green" />
+        <label for="farbe">Farbe</label>
+    </div>
+    <div class="input-field col s6">
+        <select id="bauart">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="LKW">LKW</option>
+          <option value="PKW">PKW</option>
+          <option value="Cabrio">Cabrio</option>
+          <option value="Sportwagen">Sportwagen</option>
+          <option value="Limousine">Limousine</option>
+          <option value="Oldtimer">Oldtimer</option>
+        </select>
+        <label>Bauart</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="tank" type="text" />
+        <label for="tank">Tanken</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="datum" type="text" class="datepicker" />
+        <label for="datum">Datum</label>
+      </div>
+      <div class="input-field col s12">
+        <textarea id="bemerkung" class="materialize-textarea"></textarea>
+        <label for="bemerkung">Bemerkung</label>
+      </div>
+      <form action="#">
+        <p>
+          <label>
+            <input type="checkbox" />
+            <span>Checked</span>
+          </label>
+        </p>
+    </form>
+</div>
+
+<button id="send" class="btn green" type="submit">Speichern</button>

@@ -1,4 +1,6 @@
-console.log("formular.js loaded");
+$(document).ready(function () {
+  $("select").formSelect();
+});
 
 $("#send").click(function (e) {
   e.preventDefault();
@@ -9,18 +11,6 @@ $("#send").click(function (e) {
   console.log(name);
 });
 
-/*Feld schreiben*/
-$("#name").val("Neuer Wert gesetzt");
-$("#name").addClass("valid");
-M.updateTextFields();
-
-/*Text Area*/
-$("#textarea").val("New Text");
-M.textareaAutoResize($("#textarea"));
-$("#textarea").addClass("valid");
-M.updateTextFields();
-
-/* Datepicker */
 $(".datepicker").datepicker({
   format: "dd.mm.yyyy",
   setDefaultDate: true,
@@ -103,3 +93,55 @@ $("#color-picker").spectrum({
 
 /* Dropdown */
 $(".dropdown-trigger").dropdown();
+
+$("#name").keyup(function (e) {
+  if (
+    !(
+      name.length < 3 ||
+      name.length > 255 ||
+      name.indexOf("<") ||
+      name.indexOf(">")
+    )
+  ) {
+    send = true;
+    $("#name").removeClass("red");
+  }
+});
+
+$("#send").click(function (e) {
+  e.preventDefault();
+  var send = true;
+  var name = $("#name").val();
+  /*   if(name.length < 3 || name.length > 255 || name.indexOf("<") || name.indexOf(">")){
+    send = false;
+    M.toast({html: "Name ungültig", class: green})
+    $("#name").addClass("red")
+  } */
+
+  var url = "api.php";
+  var id = $("#id").val();
+  if (id != "") {
+    url += "id=" + id;
+  }
+
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: {
+      name: $("#name").val(),
+      kraftstoff: $("#kraftstoff").val(),
+      farbe: $("color-picker").val(),
+      bauart: $("#bauart").val(),
+      tank: parseInt($("#tank").val()),
+      datum: $("#datum").val(),
+      bemerkung: $("#bemerkung").val(),
+      status: "checked",
+    },
+    dataType: "json",
+    success: function (response) {
+      var modal = M.Modal.getInstance($(".modal"));
+      modal.close();
+      showList();
+    },
+  });
+});

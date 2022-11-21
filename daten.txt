@@ -1,0 +1,6 @@
+1;Mercedes;F1;silver;benzin;5;01.01.2022;Mercedes;checked
+2;Harald;diesel;pink;;;;;
+3;McLaren;F1;orange;benzin;5;03.01.2022;McLaren;checked
+4;Ferrari;F1;red;benzin;5;04.01.2022;Ferrari;checked
+5;Alpine;F1;blue;benzin;5;05.01.2022;Alpine;checked
+6;red Bull;F1;black;benzin;5;05.01.2022;Red Bull;checked

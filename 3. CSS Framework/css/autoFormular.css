@@ -1,0 +1,8 @@
+.btn{
+    margin-right: 20px;
+  }
+
+  .dropdown-trigger,
+  .dropdown-content li a {
+    color: green;
+  }
