@@ -1,0 +1,74 @@
+<style>
+    /* ------------------------------------------------------------------------ Ihr CSS - Style - Code */
+</style>
+
+<main>
+    <script src="./../js/handlebars.min.js" referrerpolicy="no-referrer"></script>
+    <h3>
+        Aufgabe E1: Daten mit Handlebars darstellen
+        <span class="right">3 Pkt.</span>
+    </h3>
+    <table>
+        <tr>
+            <td width="50%">
+                <h6>To Do:</h6>
+                Ein JSON ist mit Handlebars darzustellen (der Variablenname ist in JS bereits definiert: <i>mydata</i>)
+                <ol>
+                    <li>Daten werden mit Handlebars dargestell (2 Punkte)</li>
+                    <li>Beim Klick auf den "edit" - Button wird die id des Datensatzes in der Konsole ausgegeben (1 Punkt)</li>
+                </ol>
+                <hr>
+                <b>Kompetenz:</b>
+                <ul class="list-initial">
+                    <li>
+                        Daten können dargestellt werden
+                    </li>
+                </ul>
+                <hr>
+                <b>Lösungsvorschau:</b>
+                <br>
+                <img src="img/e1.gif">
+
+
+
+            </td>
+            <td>
+                <h6 class="red lighten-4">Ihre Lösung:</h6>
+                <!-- ------------------------------------------------------------------------ Ihr HTML - Code -->
+                <table class="grey striped" id="myTable">
+                    <thead class="green white-text">
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Events</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Wir in Template befüllt -->
+                    </tbody>
+
+            </td>
+        </tr>
+    </table>
+</main>
+
+    <script id="template" type="text/x-handlebars-template">
+        {{#each mydata}}
+        <tr data-id="{{id}}">
+          <td>{{id}}</td>
+          <td>{{name}}</td>
+          <td><button id="edit">Edit</button></td>
+
+        </tr>
+      {{/each}}
+    </script>
+
+    <script>
+            /* ------------------------------------------------------------------------ Ihr JS - Code */
+    // JSON - Daten:
+        console.log(mydata);
+        $("#edit").click(function (e) { 
+            e.preventDefault();
+            console.log($("#data-id").val());
+        });
+    </script>

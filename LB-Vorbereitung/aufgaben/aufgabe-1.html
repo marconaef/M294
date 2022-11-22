@@ -28,7 +28,7 @@
             <td class="center">
                 <h6 class="red lighten-4">Ihre Lösung:</h6>
                 <!-- ------------------------------------------------------------------------ Ihr HTML - Code -->
-                
+                <button class="orange tooltipped" data-tooltip="Speichern">Button</button>
             </td>
         </tr>
     </table>
@@ -36,5 +36,7 @@
 
 <script>
     /* ------------------------------------------------------------------------ Ihr JS - Code */
-    
+    $(document).ready(function(){
+    $('.tooltipped').tooltip();
+  });
 </script>
