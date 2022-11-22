@@ -35,25 +35,23 @@
     <script src="./js/materialize.js"></script>
 
     <!-- Handlebars einbinden-->
-    <script
-      src="./js/handlebar.js"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="./js/handlebar.js" referrerpolicy="no-referrer"></script>
 
     <script src="./js/index.js"></script>
 
     <!-- Color Picker-->
     <script src="js/spectrum.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/spectrum.min.css">
+    <link rel="stylesheet" type="text/css" href="css/spectrum.min.css" />
 
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet"
     />
 
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-      
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
 
   <!-- Fehlerhandling -->
@@ -68,8 +66,16 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
             <a href="#modal1" class="modal-trigger">
-              <button class="btn">ADD</button>
+              <button id="add" class="btn">ADD</button>
             </a>
+          </li>
+          <li>
+            <a href="#modal1" class="modal-trigger">
+              <button id="login" class="btn">LOGIN</button>
+            </a>
+          </li>
+          <li>
+            <button id="logout" class="btn">LOGOUT</button>
           </li>
         </ul>
       </div>
@@ -153,7 +159,7 @@
       <div class="col s6 m4 l2 xl1 orange">8</div>
     </div> -->
 
-<!--  Modal Trigger 
+    <!--  Modal Trigger 
     <a class="waves-effect waves-light btn modal-trigger" href="#modal1"
       >Modal</a
     > -->
@@ -164,7 +170,6 @@
         <h4 id="modal_title"></h4>
         <p id="modal_content"></p>
       </div>
-
     </div>
   </body>
 </html>

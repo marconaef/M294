@@ -2,13 +2,29 @@
 $(function () {
   $(".modal").modal();
 
+  //Button Login oder Logout ein oder ausblenden
+  $.ajax({
+    type: "GET",
+    url: "api.php",
+    dataType: "json",
+    success: function (response) {
+      if(response.jwt.admin){
+        console.log("Admin");
+        $("#login").hide();
+      } else{
+        console.log("Kein Admin");
+        $("#logout").hide();
+      }
+    }
+  });
+
   /* $("#myTable tbody tr").click(function (e) { 
     e.preventDefault();
     var id = $(this).attr("data-id");
     console.log(id);
 }); */
 
-  $(".btn").click(function (e) {
+  $("#add").click(function (e) {
     e.preventDefault();
     console.log("ADD");
     // Beides hier machen um Zuerst Html einzulesen
@@ -40,6 +56,31 @@ $(function () {
     success: function (response) {
       console.log(response);
     },
+  });
+
+
+
+  $("#login").click(function (e) { 
+    e.preventDefault();
+    console.log("Login");
+    $("#modal_content").load("./pages/login.html", function () {
+      $.getScript("./js/login.js");
+    });
+  });
+  
+  $("#logout").click(function (e) { 
+    e.preventDefault();
+    $.ajax({
+      type: "LOGOUT",
+      url: "api.php",
+      dataType: "json",
+      success: function (response) {
+        console.log(response);
+        $("#login").show();
+        $("#logout").hide();
+        M .toast({html: "Bye Admin", classes: "rounded"});
+      }
+    });
   });
 });
 
@@ -213,6 +254,7 @@ function showList() {
         dataType: "json",
         success: function (response) {
           showList();
+          M .toast({html: "Sie haben den Datensatz " + id + " gelöscht", classes: "rounded"});
         },
       });
     });

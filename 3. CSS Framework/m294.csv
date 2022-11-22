@@ -1,8 +1,7 @@
 id;name;kraftstoff;farbe;bauart;tank;datum;bemerkung;status
 1;Mercedes;Benzin;silver;Sportwagen;525;01.01.2022;Mercedes;checked
-2;Harald;diesel;pink;;;;;
 3;McLaren;Benzin;orange;Sportwagen;53;03.01.2022;McLaren;checked
 4;Ferrari;Benzin;red;Sportwagen;6;04.01.2022;Ferrari;checked
 5;Alpine;Benzin;blue;Sportwagen;6;05.01.2022;Alpine;checked
 6;red Bull;Benzin;black;Sportwagen;6;05.01.2022;Red Bull;checked7;Lambo;Diesel;;Limousine;4;;Er isch en Lambo;checked
-7;hgfadg;Diesel;;Limousine;3;15.11.2022;dasfd;checked
+7;Lambo;Elektro;#c90076;Cabrio;4;16.11.2022;Lambo gfetzt;checked

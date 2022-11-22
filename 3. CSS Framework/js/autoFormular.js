@@ -108,40 +108,46 @@ $("#name").keyup(function (e) {
   }
 });
 
+$("#name").keyup(function (e) {
+  $("#name").removeClass("red");
+});
+
 $("#send").click(function (e) {
   e.preventDefault();
   var send = true;
   var name = $("#name").val();
-  /*   if(name.length < 3 || name.length > 255 || name.indexOf("<") || name.indexOf(">")){
+  if (name.length < 2 || name.length > 255) {
     send = false;
-    M.toast({html: "Name ungültig", class: green})
-    $("#name").addClass("red")
-  } */
+    M.toast({ html: "Name ungültig", class: "green" });
+    $("#name").addClass("red");
+  }
 
   var url = "api.php";
   var id = $("#id").val();
   if (id != "") {
-    url += "id=" + id;
+    url += "?id=" + id;
   }
 
-  $.ajax({
-    type: "POST",
-    url: url,
-    data: {
-      name: $("#name").val(),
-      kraftstoff: $("#kraftstoff").val(),
-      farbe: $("color-picker").val(),
-      bauart: $("#bauart").val(),
-      tank: parseInt($("#tank").val()),
-      datum: $("#datum").val(),
-      bemerkung: $("#bemerkung").val(),
-      status: "checked",
-    },
-    dataType: "json",
-    success: function (response) {
-      var modal = M.Modal.getInstance($(".modal"));
-      modal.close();
-      showList();
-    },
-  });
+  if (send) {
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: {
+        name: $("#name").val(),
+        kraftstoff: $("#kraftstoff").val(),
+        farbe: $("#color-picker").val(),
+        bauart: $("#bauart").val(),
+        tank: parseInt($("#tank").val()),
+        datum: $("#datum").val(),
+        bemerkung: $("#bemerkung").val(),
+        status: "checked",
+      },
+      dataType: "json",
+      success: function (response) {
+        var modal = M.Modal.getInstance($(".modal"));
+        modal.close();
+        showList();
+      },
+    });
+  }
 });
