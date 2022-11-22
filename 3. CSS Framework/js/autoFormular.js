@@ -133,7 +133,7 @@ $("#send").click(function (e) {
       type: "POST",
       url: url,
       data: {
-        name: $("#name").val(),
+        name: name,
         kraftstoff: $("#kraftstoff").val(),
         farbe: $("#color-picker").val(),
         bauart: $("#bauart").val(),
